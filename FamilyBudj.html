@@ -1,0 +1,1439 @@
+<!doctype html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <title>Семейный бюджет. Инструкция</title>
+    <meta name="description"
+        content="В этой статье я покажу вам на примере, как с помощью таблицы в Excel вести семейный бюджет, планировать и контролировать доходы и расходы семьи." />
+    <link rel="canonical" href="https://excelhack.ru/dohody-i-rashody-semyi-v-excel/" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Семейный бюджет. Доходы и расходы семьи в таблице Excel - ЭКСЕЛЬ ХАК" />
+    <meta property="og:description"
+        content="В этой статье я покажу вам на примере, как с помощью таблицы в Excel вести семейный бюджет, планировать и контролировать доходы и расходы семьи." />
+    <meta property="og:url" content="https://excelhack.ru/dohody-i-rashody-semyi-v-excel/" />
+    <meta property="og:site_name" content="ЭКСЕЛЬ ХАК" />
+    <meta property="article:publisher" content="https://www.facebook.com/excelhackru/" />
+    <meta property="article:published_time" content="2018-03-24T22:29:13+00:00" />
+    <meta property="article:modified_time" content="2022-04-16T15:54:55+00:00" />
+    <meta property="og:image"
+        content="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюдэет-в-excel-1-1.png" />
+    <meta property="og:image:width" content="1140" />
+    <meta property="og:image:height" content="439" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@excelhackru" />
+    <meta name="twitter:site" content="@excelhackru" />
+    <meta name="twitter:label1" content="Написано автором" />
+    <meta name="twitter:data1" content="Влад Каманин" />
+    <meta name="twitter:label2" content="Примерное время для чтения" />
+    <meta name="twitter:data2" content="5 минут" />
+    <link rel="alternate" type="application/rss+xml"
+        title="ЭКСЕЛЬ ХАК &raquo; Лента комментариев к &laquo;Семейный бюджет. Доходы и расходы семьи в таблице Excel&raquo;"
+        href="https://excelhack.ru/dohody-i-rashody-semyi-v-excel/feed/" />
+    <link rel="stylesheet" type="text/css" href="//excelhack.ru/wp-content/cache/wpfc-minified/7zs81j4x/g4tw5.css"
+        media="all" />
+    <style id='wp-block-library-theme-inline-css'>
+        .wp-block-audio figcaption {
+            color: #555;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .is-dark-theme .wp-block-audio figcaption {
+            color: hsla(0, 0%, 100%, .65)
+        }
+
+        .wp-block-code>code {
+            font-family: Menlo, Consolas, monaco, monospace;
+            color: #1e1e1e;
+            padding: .8em 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px
+        }
+
+        .wp-block-embed figcaption {
+            color: #555;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .is-dark-theme .wp-block-embed figcaption {
+            color: hsla(0, 0%, 100%, .65)
+        }
+
+        .blocks-gallery-caption {
+            color: #555;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .is-dark-theme .blocks-gallery-caption {
+            color: hsla(0, 0%, 100%, .65)
+        }
+
+        .wp-block-image figcaption {
+            color: #555;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .is-dark-theme .wp-block-image figcaption {
+            color: hsla(0, 0%, 100%, .65)
+        }
+
+        .wp-block-pullquote {
+            border-top: 4px solid;
+            border-bottom: 4px solid;
+            margin-bottom: 1.75em;
+            color: currentColor
+        }
+
+        .wp-block-pullquote__citation,
+        .wp-block-pullquote cite,
+        .wp-block-pullquote footer {
+            color: currentColor;
+            text-transform: uppercase;
+            font-size: .8125em;
+            font-style: normal
+        }
+
+        .wp-block-quote {
+            border-left: .25em solid;
+            margin: 0 0 1.75em;
+            padding-left: 1em
+        }
+
+        .wp-block-quote cite,
+        .wp-block-quote footer {
+            color: currentColor;
+            font-size: .8125em;
+            position: relative;
+            font-style: normal
+        }
+
+        .wp-block-quote.has-text-align-right {
+            border-left: none;
+            border-right: .25em solid;
+            padding-left: 0;
+            padding-right: 1em
+        }
+
+        .wp-block-quote.has-text-align-center {
+            border: none;
+            padding-left: 0
+        }
+
+        .wp-block-quote.is-large,
+        .wp-block-quote.is-style-large,
+        .wp-block-quote.is-style-plain {
+            border: none
+        }
+
+        .wp-block-search .wp-block-search__label {
+            font-weight: 700
+        }
+
+        .wp-block-group:where(.has-background) {
+            padding: 1.25em 2.375em
+        }
+
+        .wp-block-separator {
+            border: none;
+            border-bottom: 2px solid;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: .4
+        }
+
+        .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+            width: 100px
+        }
+
+        .wp-block-separator.has-background:not(.is-style-dots) {
+            border-bottom: none;
+            height: 1px
+        }
+
+        .wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots) {
+            height: 2px
+        }
+
+        .wp-block-table thead {
+            border-bottom: 3px solid
+        }
+
+        .wp-block-table tfoot {
+            border-top: 3px solid
+        }
+
+        .wp-block-table td,
+        .wp-block-table th {
+            padding: .5em;
+            border: 1px solid;
+            word-break: normal
+        }
+
+        .wp-block-table figcaption {
+            color: #555;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .is-dark-theme .wp-block-table figcaption {
+            color: hsla(0, 0%, 100%, .65)
+        }
+
+        .wp-block-video figcaption {
+            color: #555;
+            font-size: 13px;
+            text-align: center
+        }
+
+        .is-dark-theme .wp-block-video figcaption {
+            color: hsla(0, 0%, 100%, .65)
+        }
+
+        .wp-block-template-part.has-background {
+            padding: 1.25em 2.375em;
+            margin-top: 0;
+            margin-bottom: 0
+        }
+    </style>
+    <style id='global-styles-inline-css'>
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+            --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+            --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+            --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+            --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+            --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+            --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+            --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+            --wp--preset--font-size--small: 19.5px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36.5px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--font-size--normal: 22px;
+            --wp--preset--font-size--huge: 49.5px;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="//excelhack.ru/wp-content/cache/wpfc-minified/e34ijmg7/g4tw7.css"
+        media="all" />
+    <script type='application/json'
+        id='wpp-json'>{"sampling_active":0,"sampling_rate":100,"ajax_url":"https:\/\/excelhack.ru\/wp-json\/wordpress-popular-posts\/v1\/popular-posts","api_url":"https:\/\/excelhack.ru\/wp-json\/wordpress-popular-posts","ID":1504,"token":"c3a6db98d8","lang":0,"debug":0}</script>
+    <style>
+        .pseudo-clearfy-link {
+            color: #008acf;
+            cursor: pointer;
+        }
+
+        .pseudo-clearfy-link:hover {
+            text-decoration: none;
+        }
+    </style>
+    <style id="wpp-loading-animation-styles">
+        @-webkit-keyframes bgslide {
+            from {
+                background-position-x: 0
+            }
+
+            to {
+                background-position-x: -200%
+            }
+        }
+
+        @keyframes bgslide {
+            from {
+                background-position-x: 0
+            }
+
+            to {
+                background-position-x: -200%
+            }
+        }
+
+        .wpp-widget-placeholder,
+        .wpp-widget-block-placeholder {
+            margin: 0 auto;
+            width: 60px;
+            height: 3px;
+            background: #dd3737;
+            background: linear-gradient(90deg, #dd3737 0%, #571313 10%, #dd3737 100%);
+            background-size: 200% auto;
+            border-radius: 3px;
+            -webkit-animation: bgslide 1s infinite linear;
+            animation: bgslide 1s infinite linear
+        }
+    </style>
+    <link rel="preload" href="https://excelhack.ru/wp-content/themes/reboot/assets/fonts/wpshop-core.ttf" as="font"
+        crossorigin>
+    <link rel="preload" href="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюдэет-в-excel-1-1.png"
+        as="image" crossorigin>
+    <style>
+        .scrolltop:before {
+            color: #247a3b
+        }
+
+        .scrolltop {
+            width: 65px
+        }
+
+        .scrolltop:before {
+            content: "\fe3d"
+        }
+
+        ::selection,
+        .card-slider__category,
+        .card-slider-container .swiper-pagination-bullet-active,
+        .post-card--grid .post-card__thumbnail:before,
+        .post-card:not(.post-card--small) .post-card__thumbnail a:before,
+        .post-card:not(.post-card--small) .post-card__category,
+        .post-box--high .post-box__category span,
+        .post-box--wide .post-box__category span,
+        .page-separator,
+        .pagination .nav-links .page-numbers:not(.dots):not(.current):before,
+        .btn,
+        .btn-primary:hover,
+        .btn-primary:not(:disabled):not(.disabled).active,
+        .btn-primary:not(:disabled):not(.disabled):active,
+        .show>.btn-primary.dropdown-toggle,
+        .comment-respond .form-submit input,
+        .page-links__item {
+            background-color: #247a3b
+        }
+
+        .entry-image--big .entry-image__body .post-card__category a,
+        .home-text ul:not([class])>li:before,
+        .page-content ul:not([class])>li:before,
+        .taxonomy-description ul:not([class])>li:before,
+        .widget-area .widget_categories ul.menu li a:before,
+        .widget-area .widget_categories ul.menu li span:before,
+        .widget-area .widget_categories>ul li a:before,
+        .widget-area .widget_categories>ul li span:before,
+        .widget-area .widget_nav_menu ul.menu li a:before,
+        .widget-area .widget_nav_menu ul.menu li span:before,
+        .widget-area .widget_nav_menu>ul li a:before,
+        .widget-area .widget_nav_menu>ul li span:before,
+        .page-links .page-numbers:not(.dots):not(.current):before,
+        .page-links .post-page-numbers:not(.dots):not(.current):before,
+        .pagination .nav-links .page-numbers:not(.dots):not(.current):before,
+        .pagination .nav-links .post-page-numbers:not(.dots):not(.current):before,
+        .entry-image--full .entry-image__body .post-card__category a,
+        .entry-image--fullscreen .entry-image__body .post-card__category a,
+        .entry-image--wide .entry-image__body .post-card__category a {
+            background-color: #247a3b
+        }
+
+        .comment-respond input:focus,
+        select:focus,
+        textarea:focus,
+        .post-card--grid.post-card--thumbnail-no,
+        .post-card--standard:after,
+        .post-card--related.post-card--thumbnail-no:hover,
+        .spoiler-box,
+        .btn-primary,
+        .btn-primary:hover,
+        .btn-primary:not(:disabled):not(.disabled).active,
+        .btn-primary:not(:disabled):not(.disabled):active,
+        .show>.btn-primary.dropdown-toggle,
+        .inp:focus,
+        .entry-tag:focus,
+        .entry-tag:hover,
+        .search-screen .search-form .search-field:focus,
+        .entry-content ul:not([class])>li:before,
+        .text-content ul:not([class])>li:before,
+        .page-content ul:not([class])>li:before,
+        .taxonomy-description ul:not([class])>li:before,
+        .entry-content blockquote,
+        .input:focus,
+        input[type=color]:focus,
+        input[type=date]:focus,
+        input[type=datetime-local]:focus,
+        input[type=datetime]:focus,
+        input[type=email]:focus,
+        input[type=month]:focus,
+        input[type=number]:focus,
+        input[type=password]:focus,
+        input[type=range]:focus,
+        input[type=search]:focus,
+        input[type=tel]:focus,
+        input[type=text]:focus,
+        input[type=time]:focus,
+        input[type=url]:focus,
+        input[type=week]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #247a3b !important
+        }
+
+        .post-card--small .post-card__category,
+        .post-card__author:before,
+        .post-card__comments:before,
+        .post-card__date:before,
+        .post-card__like:before,
+        .post-card__views:before,
+        .entry-author:before,
+        .entry-date:before,
+        .entry-time:before,
+        .entry-views:before,
+        .entry-content ol:not([class])>li:before,
+        .text-content ol:not([class])>li:before,
+        .entry-content blockquote:before,
+        .spoiler-box__title:after,
+        .search-icon:hover:before,
+        .search-form .search-submit:hover:before,
+        .star-rating-item.hover,
+        .comment-list .bypostauthor>.comment-body .comment-author:after,
+        .breadcrumb a,
+        .breadcrumb span,
+        .search-screen .search-form .search-submit:before,
+        .star-rating--score-1:not(.hover) .star-rating-item:nth-child(1),
+        .star-rating--score-2:not(.hover) .star-rating-item:nth-child(1),
+        .star-rating--score-2:not(.hover) .star-rating-item:nth-child(2),
+        .star-rating--score-3:not(.hover) .star-rating-item:nth-child(1),
+        .star-rating--score-3:not(.hover) .star-rating-item:nth-child(2),
+        .star-rating--score-3:not(.hover) .star-rating-item:nth-child(3),
+        .star-rating--score-4:not(.hover) .star-rating-item:nth-child(1),
+        .star-rating--score-4:not(.hover) .star-rating-item:nth-child(2),
+        .star-rating--score-4:not(.hover) .star-rating-item:nth-child(3),
+        .star-rating--score-4:not(.hover) .star-rating-item:nth-child(4),
+        .star-rating--score-5:not(.hover) .star-rating-item:nth-child(1),
+        .star-rating--score-5:not(.hover) .star-rating-item:nth-child(2),
+        .star-rating--score-5:not(.hover) .star-rating-item:nth-child(3),
+        .star-rating--score-5:not(.hover) .star-rating-item:nth-child(4),
+        .star-rating--score-5:not(.hover) .star-rating-item:nth-child(5) {
+            color: #247a3b
+        }
+
+        a:hover,
+        a:focus,
+        a:active,
+        .spanlink:hover,
+        .entry-content a:not(.wp-block-button__link):hover,
+        .entry-content a:not(.wp-block-button__link):focus,
+        .entry-content a:not(.wp-block-button__link):active,
+        .top-menu ul li>span:hover,
+        .main-navigation ul li a:hover,
+        .main-navigation ul li span:hover,
+        .footer-navigation ul li a:hover,
+        .footer-navigation ul li span:hover,
+        .comment-reply-link:hover,
+        .pseudo-link:hover,
+        .child-categories ul li a:hover {
+            color: #247a3b
+        }
+
+        .top-menu>ul>li>a:before,
+        .top-menu>ul>li>span:before {
+            background: #247a3b
+        }
+
+        .child-categories ul li a:hover,
+        .post-box--no-thumb a:hover {
+            border-color: #247a3b
+        }
+
+        .post-box--card:hover {
+            box-shadow: inset 0 0 0 1px #247a3b
+        }
+
+        .post-box--card:hover {
+            -webkit-box-shadow: inset 0 0 0 1px #247a3b
+        }
+
+        .site-header,
+        .site-header a,
+        .site-header .pseudo-link {
+            color: #ffffff
+        }
+
+        .humburger span,
+        .top-menu>ul>li>a:before,
+        .top-menu>ul>li>span:before {
+            background: #ffffff
+        }
+
+        .site-header {
+            background-color: #217345
+        }
+
+        @media(min-width:992px) {
+            .top-menu ul li .sub-menu {
+                background-color: #217345
+            }
+        }
+
+        .site-title,
+        .site-title a {
+            color: #ffffff
+        }
+
+        .site-description {
+            color: #ffffff
+        }
+
+        .site-footer {
+            background-color: #207344
+        }
+
+        body {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .site-title,
+        .site-title a {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .site-description {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .main-navigation ul li a,
+        .main-navigation ul li span,
+        .footer-navigation ul li a,
+        .footer-navigation ul li span {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        @media(max-width:991px) {
+            .widget-area {
+                display: block;
+                margin: 0 auto
+            }
+        }
+    </style>
+    <link rel="icon" href="https://excelhack.ru/wp-content/uploads/2021/11/cropped-лого-с-буквами-простыми-1-32x32.png"
+        sizes="32x32" />
+    <link rel="icon"
+        href="https://excelhack.ru/wp-content/uploads/2021/11/cropped-лого-с-буквами-простыми-1-192x192.png"
+        sizes="192x192" />
+    <link rel="apple-touch-icon"
+        href="https://excelhack.ru/wp-content/uploads/2021/11/cropped-лого-с-буквами-простыми-1-180x180.png" />
+    <meta name="msapplication-TileImage"
+        content="https://excelhack.ru/wp-content/uploads/2021/11/cropped-лого-с-буквами-простыми-1-270x270.png" />
+    <style>
+        .clearfy-cookie {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 12px;
+            color: #555555;
+            background: #ffffff;
+            -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+            -moz-box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+            box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+            z-index: 9999;
+            font-size: 13px;
+            transition: .3s;
+        }
+
+        .clearfy-cookie--left {
+            left: 20px;
+            bottom: 20px;
+            right: auto;
+            max-width: 400px;
+            margin-right: 20px;
+        }
+
+        .clearfy-cookie--right {
+            left: auto;
+            bottom: 20px;
+            right: 20px;
+            max-width: 400px;
+            margin-left: 20px;
+        }
+
+        .clearfy-cookie.clearfy-cookie-hide {
+            transform: translateY(150%) translateZ(0);
+            opacity: 0;
+        }
+
+        .clearfy-cookie-container {
+            max-width: 1170px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .clearfy-cookie-accept {
+            background: #247a3b;
+            color: #fff;
+            border: 0;
+            padding: .4em .8em;
+            margin: 0 .5em;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .clearfy-cookie-accept:hover,
+        .clearfy-cookie-accept:focus {
+            opacity: .9;
+        }
+    </style>
+    <meta name="yandex-verification" content="f0074a864bdf4e5d" />
+    <meta name="google-site-verification" content="sU2GTTCn0Xz43dMMd0OoCmmkqKJ1G5VaKo1l5lpzXo8" />
+    <script>(function (d, w, c) { (w[c] = w[c] || []).push(function () { try { w.yaCounter41926889 = new Ya.Metrika({ id: 41926889, clickmap: true, trackLinks: true, accurateTrackBounce: true }); } catch (e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/41926889" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript> <noscript><img src="https://vk.com/rtrg?p=VK-RTRG-1359640-g2VPT" style="position:fixed; left:-999px;"
+            alt="" /></noscript>
+    <script
+        data-wpfc-render="false">var Wpfcll = { s: [], osl: 0, scroll: false, i: function () { Wpfcll.ss(); window.addEventListener('load', function () { window.addEventListener("DOMSubtreeModified", function (e) { Wpfcll.osl = Wpfcll.s.length; Wpfcll.ss(); if (Wpfcll.s.length > Wpfcll.osl) { Wpfcll.ls(false); } }, false); Wpfcll.ls(true); }); window.addEventListener('scroll', function () { Wpfcll.scroll = true; Wpfcll.ls(false); }); window.addEventListener('resize', function () { Wpfcll.scroll = true; Wpfcll.ls(false); }); window.addEventListener('click', function () { Wpfcll.scroll = true; Wpfcll.ls(false); }); }, c: function (e, pageload) { var w = document.documentElement.clientHeight || body.clientHeight; var n = 0; if (pageload) { n = 0; } else { n = (w > 800) ? 800 : 200; n = Wpfcll.scroll ? 800 : n; } var er = e.getBoundingClientRect(); var t = 0; var p = e.parentNode ? e.parentNode : false; if (typeof p.getBoundingClientRect == "undefined") { var pr = false; } else { var pr = p.getBoundingClientRect(); } if (er.x == 0 && er.y == 0) { for (var i = 0; i < 10; i++) { if (p) { if (pr.x == 0 && pr.y == 0) { if (p.parentNode) { p = p.parentNode; } if (typeof p.getBoundingClientRect == "undefined") { pr = false; } else { pr = p.getBoundingClientRect(); } } else { t = pr.top; break; } } }; } else { t = er.top; } if (w - t + n > 0) { return true; } return false; }, r: function (e, pageload) { var s = this; var oc, ot; try { oc = e.getAttribute("data-wpfc-original-src"); ot = e.getAttribute("data-wpfc-original-srcset"); originalsizes = e.getAttribute("data-wpfc-original-sizes"); if (s.c(e, pageload)) { if (oc || ot) { if (e.tagName == "DIV" || e.tagName == "A" || e.tagName == "SPAN") { e.style.backgroundImage = "url(" + oc + ")"; e.removeAttribute("data-wpfc-original-src"); e.removeAttribute("data-wpfc-original-srcset"); e.removeAttribute("onload"); } else { if (oc) { e.setAttribute('src', oc); } if (ot) { e.setAttribute('srcset', ot); } if (originalsizes) { e.setAttribute('sizes', originalsizes); } if (e.getAttribute("alt") && e.getAttribute("alt") == "blank") { e.removeAttribute("alt"); } e.removeAttribute("data-wpfc-original-src"); e.removeAttribute("data-wpfc-original-srcset"); e.removeAttribute("data-wpfc-original-sizes"); e.removeAttribute("onload"); if (e.tagName == "IFRAME") { var y = "https://www.youtube.com/embed/"; if (navigator.userAgent.match(/\sEdge?\/\d/i)) { e.setAttribute('src', e.getAttribute("src").replace(/.+\/templates\/youtube\.html\#/, y)); } e.onload = function () { if (typeof window.jQuery != "undefined") { if (jQuery.fn.fitVids) { jQuery(e).parent().fitVids({ customSelector: "iframe[src]" }); } } var s = e.getAttribute("src").match(/templates\/youtube\.html\#(.+)/); if (s) { try { var i = e.contentDocument || e.contentWindow; if (i.location.href == "about:blank") { e.setAttribute('src', y + s[1]); } } catch (err) { e.setAttribute('src', y + s[1]); } } } } } } else { if (e.tagName == "NOSCRIPT") { if (jQuery(e).attr("data-type") == "wpfc") { e.removeAttribute("data-type"); jQuery(e).after(jQuery(e).text()); } } } } } catch (error) { console.log(error); console.log("==>", e); } }, ss: function () { var i = Array.prototype.slice.call(document.getElementsByTagName("img")); var f = Array.prototype.slice.call(document.getElementsByTagName("iframe")); var d = Array.prototype.slice.call(document.getElementsByTagName("div")); var a = Array.prototype.slice.call(document.getElementsByTagName("a")); var s = Array.prototype.slice.call(document.getElementsByTagName("span")); var n = Array.prototype.slice.call(document.getElementsByTagName("noscript")); this.s = i.concat(f).concat(d).concat(a).concat(s).concat(n); }, ls: function (pageload) { var s = this;[].forEach.call(s.s, function (e, index) { s.r(e, pageload); }); } }; document.addEventListener('DOMContentLoaded', function () { wpfci(); }); function wpfci() { Wpfcll.i(); }</script>
+</head>
+
+<body data-rsssl=1
+    class="post-template-default single single-post postid-1504 single-format-standard wp-embed-responsive sidebar-right elementor-default elementor-kit-8525">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg>
+    <div id="page" class="site">
+        <nav id="site-navigation" class="main-navigation fixed" style="display: none;">
+            <div class="main-navigation-inner full">
+                <ul id="header_menu"></ul>
+            </div>
+        </nav>
+        <div class="container header-separator"></div>
+        <div class="mobile-menu-placeholder js-mobile-menu-placeholder"></div>
+        <div id="content" class="site-content fixed">
+            <div class="site-content-inner">
+                <div id="primary" class="content-area" itemscope itemtype="http://schema.org/Article">
+                    <main id="main" class="site-main article-card">
+                        <article id="post-1504"
+                            class="article-post post-1504 post type-post status-publish format-standard has-post-thumbnail category-budget">
+                            <h1 class="entry-title" itemprop="headline">Семейный бюджет. Доходы и расходы семьи в
+                                таблице Excel</h1>
+                            <div class="entry-content" itemprop="articleBody">
+                                <p>Каждый, кому не безразлично финансовое состояние и будущее семьи занимается
+                                    планированием семейного бюджета, учитывая расходы и доходы и делает это по-своему.
+                                    Кто-то фиксирует планы по расходам и доходам семьи в блокноте, кто-то в приложении,
+                                    а кто-то пользуется Excel.</p>
+                                <p>В этой статье я покажу вам на примере, как с помощью таблицы в Excel вести семейный
+                                    бюджет, планировать и контролировать доходы и расходы семьи.</p>
+                                <p style="text-align: center;">
+                                    <style>
+                                        .b-unisender-form {
+                                            background-color: #ffffff;
+                                            border-width: 1px;
+                                            border-style: dashed;
+                                            border-color: #247a3b;
+                                            padding: 20px 20px 20px 20px;
+                                            font-size: 14px;
+                                            color: #191919;
+                                            font-weight: 200;
+                                            margin: 0 150px 0 150px;
+                                        }
+
+                                        .b-unisender-form .b-unisender-form__title {
+                                            font-size: 18px;
+                                            line-height: 1.5;
+                                            font-weight: 900;
+                                            margin: 0 0 20px 0;
+                                            text-align: left;
+                                            color: #191919;
+                                            background-color: #ffffff;
+                                        }
+
+                                        .b-unisender-form .b-unisender-form__description {
+                                            font-size: 16px;
+                                            line-height: 1.5;
+                                            font-weight: 400;
+                                            margin: 0 0 20px 0;
+                                            text-align: left;
+                                            color: #191919;
+                                            background-color: #ffffff;
+                                        }
+
+                                        .b-unisender-form .b-unisender-form__submit-button {
+                                            font-size: 14px;
+                                            line-height: 1.5;
+                                            font-weight: 400;
+                                            padding: 8px 16px 8px 16px;
+                                            border-style: none;
+                                            color: #ffffff;
+                                            background-color: #247a3b;
+                                        }
+
+                                        .b-unisender-form .b-unisender-form__button-box svg circle {
+                                            fill: #247a3b !important;
+                                        }
+
+                                        .b-unisender-form .b-unisender-field[data-unisender-field-name="Name"],
+                                        .b-unisender-form .b-unisender-checkbox[data-unisender-field-name="Name"] {
+                                            font-size: 14px;
+                                            font-weight: 400;
+                                            color: #191919;
+                                            line-height: 1.4;
+                                            margin: 0 0 20px 0;
+                                        }
+
+                                        .b-unisender-form .b-unisender-field[data-unisender-field-name="Name"] .b-unisender-field__input,
+                                        .b-unisender-form .b-unisender-checkbox[data-unisender-field-name="Name"] .b-unisender-checkbox__input {
+                                            background-color: #ffffff;
+                                            text-align: left;
+                                            border-width: 1px;
+                                            border-style: solid;
+                                            border-color: #adadad;
+                                            padding: 8px 16px 8px 16px;
+                                        }
+
+                                        .b-unisender-form .b-unisender-field[data-unisender-field-name="email"],
+                                        .b-unisender-form .b-unisender-checkbox[data-unisender-field-name="email"] {
+                                            font-size: 14px;
+                                            font-weight: 400;
+                                            color: #191919;
+                                            line-height: 1.4;
+                                            margin: 0 0 20px 0;
+                                        }
+
+                                        .b-unisender-form .b-unisender-field[data-unisender-field-name="email"] .b-unisender-field__input,
+                                        .b-unisender-form .b-unisender-checkbox[data-unisender-field-name="email"] .b-unisender-checkbox__input {
+                                            background-color: #ffffff;
+                                            text-align: left;
+                                            border-width: 1px;
+                                            border-style: solid;
+                                            border-color: #adadad;
+                                            padding: 8px 16px 8px 16px;
+                                        }
+                                    </style>
+                                </p>
+                                <p>&nbsp;</p>
+                                <div class="table-of-contents open">
+                                    <div class="table-of-contents__header"><span
+                                            class="table-of-contents__hide js-table-of-contents-hide">Содержание</span>
+                                    </div>
+                                    <ol class="table-of-contents__list js-table-of-contents-list">
+                                        <li class="level-1"><a href="#zachem-nuzhno-vesti-semeynyy-byudzhet">Зачем нужно
+                                                вести семейный бюджет?</a></li>
+                                        <li class="level-1"><a href="#iz-chego-sostoit-shablon-rashodov-i-dohodov">Из
+                                                чего состоит шаблон расходов и доходов?</a></li>
+                                        <li class="level-1"><a href="#kak-zapolnit-shablon-semeynogo-byudzheta">Как
+                                                заполнить шаблон семейного бюджета?</a></li>
+                                    </ol>
+                                </div>
+                                <h2 id="zachem-nuzhno-vesti-semeynyy-byudzhet">Зачем нужно вести семейный бюджет?</h2>
+                                <p>План бюджета на год позволяет рассчитать основные повторяющие расходы, планируемые
+                                    доходы, а также запланировать крупные покупки, семейный отпуск и т.д. Анализ и
+                                    контроль собственных финансов, позволит вам ставить четкие цели, отсекать
+                                    бесполезные траты и не допускать кассовых разрывов в семейном бюджете.</p>
+                                <h2 id="iz-chego-sostoit-shablon-rashodov-i-dohodov">Из чего состоит шаблон расходов и
+                                    доходов?</h2>
+                                <p>Шаблон включает в себя:</p>
+                                <ul>
+                                    <li><strong>Раздел &#8220;Итого&#8221;</strong></li>
+                                </ul>
+                                <figure class="wp-block-image"><a
+                                        href="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюдэет-в-excel-1-1.png"><span
+                                            itemprop="image" itemscope itemtype="https://schema.org/ImageObject"><img
+                                                itemprop="url image" loading="lazy" width="1140" height="439"
+                                                class="wp-image-1521"
+                                                src="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюдэет-в-excel-1-1.png"
+                                                alt="Семейный бюджет. Доходы и расходы семьи в таблице Excel"
+                                                srcset="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюдэет-в-excel-1-1.png 1140w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюдэет-в-excel-1-1-200x77.png 200w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюдэет-в-excel-1-1-300x116.png 300w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюдэет-в-excel-1-1-768x296.png 768w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюдэет-в-excel-1-1-1024x394.png 1024w"
+                                                sizes="(max-width: 1140px) 100vw, 1140px" />
+                                            <meta itemprop="width" content="1140">
+                                            <meta itemprop="height" content="439">
+                                        </span></a></figure>
+                                <p>В этом разделе отображены сводные данные по всем доходам, планируемым расходам и
+                                    сбережениям как в табличном, так и в графическом виде. График слева показывает
+                                    динамику профицита бюджета и баланс расходов в течение года. На нем наглядно видно
+                                    те месяцы, где плановые расходы превышают ваши доходы. На графике справа отображен
+                                    баланс ваших сбережений в течение года.</p>
+                                <ul>
+                                    <li><strong>Раздел &#8220;Доходы&#8221;</strong></li>
+                                </ul>
+                                <figure class="wp-block-image"><a
+                                        href="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-2.png"><span
+                                            itemprop="image" itemscope itemtype="https://schema.org/ImageObject"><img
+                                                onload="Wpfcll.r(this,true);"
+                                                src="https://excelhack.ru/wp-content/plugins/wp-fastest-cache-premium/pro/images/blank.gif"
+                                                itemprop="url image" loading="lazy" width="1143" height="178"
+                                                class="wp-image-1509"
+                                                data-wpfc-original-src="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-2.png"
+                                                alt="Семейный бюджет в Excel - раздел доходы"
+                                                data-wpfc-original-srcset="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-2.png 1143w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-2-200x31.png 200w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-2-300x47.png 300w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-2-768x120.png 768w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-2-1024x159.png 1024w"
+                                                data-wpfc-original-sizes="(max-width: 1143px) 100vw, 1143px" />
+                                            <meta itemprop="width" content="1143">
+                                            <meta itemprop="height" content="178">
+                                        </span></a></figure>
+                                <p>Здесь мы вносим суммы доходов по статьям на каждый месяц. Важно тщательно разбить на
+                                    категории все доходы, чтобы по мере использования бюджета в течение года иметь
+                                    возможность вносить корректировки и грамотно планировать бюджет.</p>
+                                <p>В разделе &#8220;Доходы&#8221; есть пункт &#8220;Трансфер со сбережений&#8221;. В
+                                    него вносятся значения, когда мы хотим в какой-то из месяцев использовать сумму из
+                                    бюджета сбережений. Для этого внесите сумму в строку &#8220;34&#8221; и внесите
+                                    отрицательное значение этой суммы в строке &#8220;9&#8221; для вычета из баланса
+                                    сбережений.</p>
+                                <ul>
+                                    <li><strong>Раздел &#8220;Сбережения&#8221;</strong></li>
+                                </ul>
+                                <figure class="wp-block-image"><a
+                                        href="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-3.png"><span
+                                            itemprop="image" itemscope itemtype="https://schema.org/ImageObject"><img
+                                                onload="Wpfcll.r(this,true);"
+                                                src="https://excelhack.ru/wp-content/plugins/wp-fastest-cache-premium/pro/images/blank.gif"
+                                                itemprop="url image" loading="lazy" width="1140" height="158"
+                                                class="wp-image-1510"
+                                                data-wpfc-original-src="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-3.png"
+                                                alt="Доходы и расходы семьи в Excel - раздел сбережения"
+                                                data-wpfc-original-srcset="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-3.png 1140w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-3-200x28.png 200w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-3-300x42.png 300w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-3-768x106.png 768w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-3-1024x142.png 1024w"
+                                                data-wpfc-original-sizes="(max-width: 1140px) 100vw, 1140px" />
+                                            <meta itemprop="width" content="1140">
+                                            <meta itemprop="height" content="158">
+                                        </span></a></figure>
+                                <p>В строки раздела &#8220;Сбережения&#8221; мы вносим суммы по статьям и месяцам, на
+                                    которые хотим отложить деньги.</p>
+                                <ul>
+                                    <li><strong>Раздел &#8220;Расходы&#8221;</strong></li>
+                                </ul>
+                                <figure class="wp-block-image"><a
+                                        href="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-4.png"><span
+                                            itemprop="image" itemscope itemtype="https://schema.org/ImageObject"><img
+                                                onload="Wpfcll.r(this,true);"
+                                                src="https://excelhack.ru/wp-content/plugins/wp-fastest-cache-premium/pro/images/blank.gif"
+                                                itemprop="url image" loading="lazy" width="1143" height="345"
+                                                class="wp-image-1511"
+                                                data-wpfc-original-src="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-4.png"
+                                                alt="Семейный бюджет в Excel - раздел расходы"
+                                                data-wpfc-original-srcset="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-4.png 1143w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-4-200x60.png 200w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-4-300x91.png 300w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-4-768x232.png 768w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-4-1024x309.png 1024w"
+                                                data-wpfc-original-sizes="(max-width: 1143px) 100vw, 1143px" />
+                                            <meta itemprop="width" content="1143">
+                                            <meta itemprop="height" content="345">
+                                        </span></a></figure>
+                                <p>В этом разделе расходы распределены по основным категориям:</p>
+                                <ul>
+                                    <li><strong>Бытовые расходы</strong> &#8211; расходы, связанные, с содержанием жилья
+                                        (аренда, коммунальные платежи, Интернет, техническое обслуживание, телефон);
+                                    </li>
+                                    <li><strong>Жизнедеятельность</strong> &#8211; траты на обеспечение
+                                        жизнедеятельности (продукты, личные покупки, одежда, кафе/рестораны, химчистка,
+                                        парикмахерская/салоны);</li>
+                                    <li><strong>Дети</strong> &#8211; затраты, связанные с детьми (медицинское
+                                        обслуживание, одежда, покупка принадлежностей для учебы, обеды, няня, игрушки,
+                                        питание);</li>
+                                    <li><strong>Транспорт</strong> &#8211; траты на обслуживание автомобиля, бензин,
+                                        билеты на автобус, метро, такси, ремонт, лицензии и т.д;</li>
+                                    <li><strong>Здоровье</strong> &#8211; затраты на докторов, стоматолога, покупку
+                                        лекарств, вызов скорой помощи, различные процедуры и т.д;</li>
+                                    <li><strong>Образование</strong> &#8211; расходы на обучение, покупку книг, подкаст,
+                                        аудио книги и т.д;</li>
+                                    <li><strong>Подарки/Благотворительность</strong> &#8211; траты на покупку подарков,
+                                        благотворительные и религиозные взносы и т.д;</li>
+                                    <li><strong>Налоги/Кредиты</strong> &#8211; затраты на погашение долгов по
+                                        кредитам/ипотеке, кредитным картам и налогам;</li>
+                                    <li><strong>Развлечения</strong> &#8211; расходы на развлечения по категориям
+                                        (музыка, фильмы, игры, кинотеатр, театр, концерты, книги, хобби, фото, спорт,
+                                        игрушки, гаджеты и т.д);</li>
+                                    <li><strong>Животные </strong>&#8211; затраты на еду для животных, медицинское
+                                        обслуживание, игрушки и т.д;</li>
+                                    <li><strong>Подписки </strong>&#8211; траты на ежемесячные подписки на газеты,
+                                        журналы, музыкальные сервисы и т.д;</li>
+                                    <li><strong>Отпуск </strong>&#8211; затраты на отпуск (билеты, проживание, питание,
+                                        развлечения и т.д.);</li>
+                                    <li><strong>Разное </strong>&#8211; расходы на различные банковские комиссии, а
+                                        также статьи расходов не попавшие ни под одну из выше перечисленных категорий.
+                                    </li>
+                                </ul>
+                                <figure class="wp-block-image"><a
+                                        href="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-5.png"><span
+                                            itemprop="image" itemscope itemtype="https://schema.org/ImageObject"><img
+                                                onload="Wpfcll.r(this,true);"
+                                                src="https://excelhack.ru/wp-content/plugins/wp-fastest-cache-premium/pro/images/blank.gif"
+                                                itemprop="url image" loading="lazy" width="1145" height="140"
+                                                class="wp-image-1513"
+                                                data-wpfc-original-src="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-5.png"
+                                                alt="Семейный бюджет в Excel - подитог"
+                                                data-wpfc-original-srcset="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-5.png 1145w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-5-200x24.png 200w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-5-300x37.png 300w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-5-768x94.png 768w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-5-1024x125.png 1024w"
+                                                data-wpfc-original-sizes="(max-width: 1145px) 100vw, 1145px" />
+                                            <meta itemprop="width" content="1145">
+                                            <meta itemprop="height" content="140">
+                                        </span></a></figure>
+                                <ul>
+                                    <li><strong>Стартовый баланс расходов и сбережений</strong></li>
+                                </ul>
+                                <figure class="wp-block-image"><span itemprop="image" itemscope
+                                        itemtype="https://schema.org/ImageObject"><img onload="Wpfcll.r(this,true);"
+                                            src="https://excelhack.ru/wp-content/plugins/wp-fastest-cache-premium/pro/images/blank.gif"
+                                            itemprop="url image" loading="lazy" width="268" height="52"
+                                            class="wp-image-1514"
+                                            data-wpfc-original-src="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-6.png"
+                                            alt="Стартовый баланс расходов и сбережений"
+                                            data-wpfc-original-srcset="https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-6.png 268w, https://excelhack.ru/wp-content/uploads/2018/03/семейный-бюджет-в-excel-6-200x39.png 200w"
+                                            data-wpfc-original-sizes="(max-width: 268px) 100vw, 268px" />
+                                        <meta itemprop="width" content="268">
+                                        <meta itemprop="height" content="52">
+                                    </span></figure>
+                                <p>В правом верхнему углу шаблона нужно внести данные о стартовом балансе расходов и
+                                    сбережений, которые вы хотите учесть в данном плане бюджета.</p>
+                                <h2 id="kak-zapolnit-shablon-semeynogo-byudzheta">Как заполнить шаблон семейного
+                                    бюджета?</h2>
+                                <ol>
+                                    <li>Внесите данные о стартовом балансе расходов и доходов;</li>
+                                    <li>Заполните данные по доходам;</li>
+                                    <li>Отобразите повторяющиеся или основные расходы по категориям в течение года;</li>
+                                    <li>Отразите покупку подарков на основные праздники друзьям и близким;</li>
+                                    <li>Внесите планы по крупным покупкам или поездкам.</li>
+                                </ol>
+                                <p>Теперь, у вас есть ориентировочный прогноз вашего семейного бюджета, в который вы
+                                    можете вносить планы по сбережениям, корректировать расходы и разрабатывать
+                                    активности по доходам.</p>
+                            </div>
+                        </article>
+                        <meta itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage"
+                            itemid="https://excelhack.ru/dohody-i-rashody-semyi-v-excel/"
+                            content="Семейный бюджет. Доходы и расходы семьи в таблице Excel">
+                        <meta itemprop="dateModified" content="2022-04-16">
+                        <meta itemprop="datePublished" content="2018-03-25T01:29:13+03:00">
+                        <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization"
+                            style="display: none;">
+                            <meta itemprop="name" content="ЭКСЕЛЬ ХАК">
+                            <meta itemprop="telephone" content="ЭКСЕЛЬ ХАК">
+                            <meta itemprop="address" content="https://excelhack.ru">
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="snp-root"> <input type="hidden" id="snp_popup" value="" /> <input type="hidden" id="snp_popup_id"
+            value="" /> <input type="hidden" id="snp_popup_theme" value="" /> <input type="hidden" id="snp_exithref"
+            value="" /> <input type="hidden" id="snp_exittarget" value="" />
+        <div id="snppopup-welcome" class="snp-pop-8333 snppopup"><input type="hidden" class="snp_open"
+                value="scroll" /><input type="hidden" class="snp_close" value="manual" /><input type="hidden"
+                class="snp_show_on_exit" value="2" /><input type="hidden" class="snp_exit_js_alert_text"
+                value="" /><input type="hidden" class="snp_exit_scroll_down" value="10" /><input type="hidden"
+                class="snp_exit_scroll_up" value="10" /><input type="hidden" class="snp_open_scroll" value="16" /><input
+                type="hidden" class="snp_optin_redirect_url" value="" /><input type="hidden"
+                class="snp_optin_form_submit" value="single" /><input type="hidden" class="snp_show_cb_button"
+                value="yes" /><input type="hidden" class="snp_popup_id" value="8333" /><input type="hidden"
+                class="snp_popup_theme" value="builder" /><input type="hidden" class="snp_overlay"
+                value="default" /><input type="hidden" class="snp_cookie_conversion" value="0" /><input type="hidden"
+                class="snp_cookie_close" value="-1" />
+            <style>
+                .snp-pop-8333 .snp-bld-step-cont-1 {}
+
+                .snp-pop-8333 .snp-bld-step-1 {
+                    width: 600px;
+                    height: 400px;
+                    background-color: #ffffff;
+                    background-position: center center;
+                    background-repeat: repeat;
+                }
+
+                .snp-pop-8333 .bld-step-1-el-0 {
+                    border: 1px solid transparent;
+                    width: 200px;
+                    height: 50px;
+                    top: 314px;
+                    left: 196px;
+                    z-index: 100;
+                }
+
+                .snp-pop-8333 .bld-step-1-el-0 .bld-el,
+                .snp-pop-8333 .bld-step-1-el-0 .bld-el p,
+                .snp-pop-8333 .bld-step-1-el-0 .bld-el:focus,
+                .snp-pop-8333 .bld-step-1-el-0 .bld-el:active,
+                .snp-pop-8333 .bld-step-1-el-0 .bld-el:hover {
+                    outline: 0;
+                    color: #ffffff;
+                    font-family: 'Open Sans';
+                    font-size: 22px;
+                    font-weight: bold;
+                    border-style: none;
+                    border-width: 0px;
+                    border-radius: 10px;
+                    background-color: #5394f2 !important;
+                    background-position: center center;
+                    background-repeat: repeat;
+                }
+
+                .snp-pop-8333 .bld-step-1-el-1 {
+                    border: 1px solid transparent;
+                    width: 519px;
+                    height: 139px;
+                    top: 48px;
+                    left: 34px;
+                    z-index: 100;
+                }
+
+                .snp-pop-8333 .bld-step-1-el-1 .bld-el,
+                .snp-pop-8333 .bld-step-1-el-1 .bld-el p,
+                .snp-pop-8333 .bld-step-1-el-1 .bld-el:focus,
+                .snp-pop-8333 .bld-step-1-el-1 .bld-el:active,
+                .snp-pop-8333 .bld-step-1-el-1 .bld-el:hover {
+                    outline: 0;
+                    font-family: Arial;
+                    border-width: 0px;
+                    background-position: center center;
+                    background-repeat: repeat;
+                }
+
+                .snp-pop-8333 .bld-step-1-el-2 {
+                    border: 1px solid transparent;
+                    width: 143.141px;
+                    height: 179px;
+                    top: 123px;
+                    left: 225px;
+                    z-index: 100;
+                }
+
+                .snp-pop-8333 .bld-step-1-el-2 .bld-el,
+                .snp-pop-8333 .bld-step-1-el-2 .bld-el p,
+                .snp-pop-8333 .bld-step-1-el-2 .bld-el:focus,
+                .snp-pop-8333 .bld-step-1-el-2 .bld-el:active,
+                .snp-pop-8333 .bld-step-1-el-2 .bld-el:hover {
+                    outline: 0;
+                }
+
+                #snp-pop-8333-overlay {
+                    opacity: 0.8;
+                    background-color: #5A5757;
+                }
+            </style>
+        </div>
+    </div>
+    <link rel="stylesheet" type="text/css" href="//excelhack.ru/wp-content/cache/wpfc-minified/nnd4djm/g4tw7.css"
+        media="all" />
+    <script data-cfasync="false" async="async" defer="defer"
+        src='https://www.google.com/recaptcha/api.js?render=explicit' id='gglcptch_api-js'></script>
+    <div id="clearfy-cookie" class="clearfy-cookie clearfy-cookie-hide clearfy-cookie--bottom">
+        <div class="clearfy-cookie-container"> Привет Катерина, ты очень красивая). <button id="clearfy-cookie-accept"
+                class="clearfy-cookie-accept">Ок</button></div>
+    </div><noscript id="wpfc-google-fonts">
+        <link rel='stylesheet' id='plugin_name-admin-ui-css-css'
+            href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.1/themes/smoothness/jquery-ui.css' media='' />
+        <link rel='stylesheet' id='google-fonts-css'
+            href='https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400i%2C700%7CMontserrat%3A400%2C400i%2C700&#038;subset=cyrillic&#038;display=swap'
+            media='all' />
+        <link rel='stylesheet' id='font-Open+Sans-css' href='//fonts.googleapis.com/css?family=Open+Sans' media='all' />
+    </noscript>
+    <script>document.addEventListener('DOMContentLoaded', function () { function wpfcgl() { var wgh = document.querySelector('noscript#wpfc-google-fonts').innerText, wgha = wgh.match(/<link[^\>]+>/gi); for (i = 0; i < wgha.length; i++) { var wrpr = document.createElement('div'); wrpr.innerHTML = wgha[i]; document.body.appendChild(wrpr.firstChild); } } wpfcgl(); });</script>
+    <script>!function () { var t = document.createElement("script"); t.type = "text/javascript", t.async = !0, t.src = 'https://vk.com/js/api/openapi.js?169', t.onload = function () { VK.Retargeting.Init("VK-RTRG-1359640-g2VPT"), VK.Retargeting.Hit() }, document.head.appendChild(t) }();</script>
+    <script>var snp_bld_open8333 = function () { _snp_bld_open(8333); };
+        var snp_bld_close8333 = function () { _snp_bld_close(8333); };</script>
+    <script
+        id='contact-form-7-js-extra'>var wpcf7 = { "api": { "root": "https:\/\/excelhack.ru\/wp-json\/", "namespace": "contact-form-7\/v1" } };</script>
+    <script
+        id='unisender_form_js-js-extra'>var UNISENDER_AJAX = { "url": "https:\/\/excelhack.ru\/wp-admin\/admin-ajax.php" };</script>
+    <script
+        id='reboot-scripts-js-extra'>var settings_array = { "rating_text_average": "\u0441\u0440\u0435\u0434\u043d\u0435\u0435", "rating_text_from": "\u0438\u0437", "lightbox_display": "1", "sidebar_fixed": "1" };
+            var wps_ajax = { "url": "https:\/\/excelhack.ru\/wp-admin\/admin-ajax.php", "nonce": "9f7447544c" };
+            var wpshop_views_counter_params = { "url": "https:\/\/excelhack.ru\/wp-admin\/admin-ajax.php", "nonce": "9f7447544c", "is_postviews_enabled": "", "post_id": "1504" };</script>
+    <script
+        id='gglcptch_script-js-extra'>var gglcptch = { "options": { "version": "v2", "sitekey": "6LfzNBsUAAAAAGz32pOwamD1JgfV69jVyv41CW0w", "error": "<strong>\u0412\u043d\u0438\u043c\u0430\u043d\u0438\u0435<\/strong>:&nbsp;\u0412 \u0442\u0435\u043a\u0443\u0449\u0435\u0439 \u0444\u043e\u0440\u043c\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0431\u043e\u043b\u0435\u0435 \u043e\u0434\u043d\u043e\u0433\u043e \u0431\u043b\u043e\u043a\u0430 reCAPTCHA. \u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u0443\u0434\u0430\u043b\u0438\u0442\u0435 \u0432\u0441\u0435 \u043b\u0438\u0448\u043d\u0438\u0435 \u0431\u043b\u043e\u043a\u0438 reCAPTCHA \u0434\u043b\u044f \u0434\u0430\u043b\u044c\u043d\u0435\u0439\u0448\u0435\u0439 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u044b.", "disable": 0, "theme": "light" }, "vars": { "visibility": false } };</script>
+    <script src='//excelhack.ru/wp-content/cache/wpfc-minified/kp6artav/g4tw6.js' id='jquery-core-js'></script>
+    <script src='//excelhack.ru/wp-content/cache/wpfc-minified/2ncsyb55/g4tw6.js' id='wpp-js-js'></script>
+    <script>var unisenderValidationErrorTexts = {
+            minLengthErrorText: 'Поле слишком короткое.',
+            maxLengthErrorText: 'Поле слишком длинное.',
+            minNumberErrorText: 'Число меньше допустимого минимума.',
+            maxNumberErrorText: 'Число превышает максимально допустимое.',
+            regExpErrorText: '',
+            requiredErrorText: 'Поле обязательно для заполнения.',
+            emailErrorText: 'Введенный адрес электронной почты недействителен.'
+        }</script>
+    <script>document.getElementById("ak_js_1").setAttribute("value", (new Date()).getTime());</script>
+    <script>(function (m, e, t, r, i, k, a) { m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }; m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a) })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(41926889, "init", { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true, ecommerce: "dataLayer" });</script>
+    <script>var pseudo_links = document.querySelectorAll(".pseudo-clearfy-link"); for (var i = 0; i < pseudo_links.length; i++) { pseudo_links[i].addEventListener("click", function (e) { window.open(e.target.getAttribute("data-uri")); }); }</script>
+    <script>var snp_f = [];
+        var snp_hostname = new RegExp(location.host);
+        var snp_http = new RegExp("^(http|https)://", "i");
+        var snp_cookie_prefix = '';
+        var snp_separate_cookies = true;
+        var snp_ajax_url = 'https://excelhack.ru/wp-admin/admin-ajax.php';
+        var snp_domain_url = 'https://excelhack.ru';
+        var snp_ajax_nonce = '8a2bffe946';
+        var snp_ajax_ping_time = 1000;
+        var snp_ignore_cookies = false;
+        var snp_enable_analytics_events = false;
+        var snp_is_mobile = false;
+        var snp_enable_mobile = true;
+        var snp_use_in_all = false;
+        var snp_excluded_urls = [];
+        var snp_close_on_esc_key = false;
+        snp_excluded_urls.push('');</script>
+    <script>snp_f['snppopup-welcome-open'] = snp_bld_open8333;
+        snp_f['snppopup-welcome-close'] = snp_bld_close8333;</script>
+    <script src='//excelhack.ru/wp-content/cache/wpfc-minified/g53c8ivg/g4tw6.js' id='jquery-ui-core-js'></script>
+    <script src='//excelhack.ru/wp-content/cache/wpfc-minified/kxj7flie/g4tw6.js' id='jquery-ui-datepicker-js'></script>
+    <script
+        id='jquery-ui-datepicker-js-after'>jQuery(function (jQuery) { jQuery.datepicker.setDefaults({ "closeText": "\u0417\u0430\u043a\u0440\u044b\u0442\u044c", "currentText": "\u0421\u0435\u0433\u043e\u0434\u043d\u044f", "monthNames": ["\u042f\u043d\u0432\u0430\u0440\u044c", "\u0424\u0435\u0432\u0440\u0430\u043b\u044c", "\u041c\u0430\u0440\u0442", "\u0410\u043f\u0440\u0435\u043b\u044c", "\u041c\u0430\u0439", "\u0418\u044e\u043d\u044c", "\u0418\u044e\u043b\u044c", "\u0410\u0432\u0433\u0443\u0441\u0442", "\u0421\u0435\u043d\u0442\u044f\u0431\u0440\u044c", "\u041e\u043a\u0442\u044f\u0431\u0440\u044c", "\u041d\u043e\u044f\u0431\u0440\u044c", "\u0414\u0435\u043a\u0430\u0431\u0440\u044c"], "monthNamesShort": ["\u042f\u043d\u0432", "\u0424\u0435\u0432", "\u041c\u0430\u0440", "\u0410\u043f\u0440", "\u041c\u0430\u0439", "\u0418\u044e\u043d", "\u0418\u044e\u043b", "\u0410\u0432\u0433", "\u0421\u0435\u043d", "\u041e\u043a\u0442", "\u041d\u043e\u044f", "\u0414\u0435\u043a"], "nextText": "\u0414\u0430\u043b\u0435\u0435", "prevText": "\u041d\u0430\u0437\u0430\u0434", "dayNames": ["\u0412\u043e\u0441\u043a\u0440\u0435\u0441\u0435\u043d\u044c\u0435", "\u041f\u043e\u043d\u0435\u0434\u0435\u043b\u044c\u043d\u0438\u043a", "\u0412\u0442\u043e\u0440\u043d\u0438\u043a", "\u0421\u0440\u0435\u0434\u0430", "\u0427\u0435\u0442\u0432\u0435\u0440\u0433", "\u041f\u044f\u0442\u043d\u0438\u0446\u0430", "\u0421\u0443\u0431\u0431\u043e\u0442\u0430"], "dayNamesShort": ["\u0412\u0441", "\u041f\u043d", "\u0412\u0442", "\u0421\u0440", "\u0427\u0442", "\u041f\u0442", "\u0421\u0431"], "dayNamesMin": ["\u0412\u0441", "\u041f\u043d", "\u0412\u0442", "\u0421\u0440", "\u0427\u0442", "\u041f\u0442", "\u0421\u0431"], "dateFormat": "dd.mm.yy", "firstDay": 1, "isRTL": false }); });</script>
+    <script src='https://excelhack.ru/wp-content/plugins/arscode-ninja-popups/assets/js/cookie.js'
+        id='js-cookie-js'></script>
+    <script src='https://excelhack.ru/wp-content/plugins/arscode-ninja-popups/assets/js/tooltipster.bundle.min.js'
+        id='jquery-np-tooltipster-js'></script>
+    <script src='https://excelhack.ru/wp-content/plugins/arscode-ninja-popups/assets/js/jquery.material.form.min.js'
+        id='material-design-js-js'></script>
+    <script
+        src='https://excelhack.ru/wp-content/plugins/arscode-ninja-popups/assets/vendor/intl-tel-input/js/intlTelInput-jquery.min.js'
+        id='jquery-intl-phone-input-js-js'></script>
+    <script src='https://excelhack.ru/wp-content/plugins/arscode-ninja-popups/assets/js/dialog_trigger.js'
+        id='js-dialog_trigger-js'></script>
+    <script src='https://excelhack.ru/wp-content/plugins/arscode-ninja-popups/assets/js/ninjapopups.js'
+        id='js-ninjapopups-js'></script>
+    <script src='//excelhack.ru/wp-content/cache/wpfc-minified/kwsjvqqz/g4tw5.js' id='regenerator-runtime-js'></script>
+    <script src='//excelhack.ru/wp-content/cache/wpfc-minified/fopu60ry/g4tw5.js' id='wp-polyfill-js'></script>
+    <script src='//excelhack.ru/wp-content/cache/wpfc-minified/kbpuuop8/g4tw5.js' id='contact-form-7-js'></script>
+    <script src='//excelhack.ru/wp-content/cache/wpfc-minified/mlz0eczk/g4tw5.js' id='unisender_form_js-js'></script>
+    <script src='//excelhack.ru/wp-content/cache/wpfc-minified/6ndwtn6u/g4tw5.js' id='wp-syntax-js-js'></script>
+    <script src='//excelhack.ru/wp-content/cache/wpfc-minified/l1m6d28e/g4tw5.js' id='reboot-scripts-js'></script>
+    <script src='//excelhack.ru/wp-content/cache/wpfc-minified/d4v9x4je/g4tw7.js' id='comment-reply-js'></script>
+    <script src='//excelhack.ru/wp-content/cache/wpfc-minified/r866u8r/g4tw7.js' id='gglcptch_script-js'></script>
+    <script>var cookie_clearfy_hide = document.cookie.replace(/(?:(?:^|.*;\s*)clearfy_cookie_hide\s*\=\s*([^;]*).*$)|^.*$/, "$1"); if (!cookie_clearfy_hide.length) { document.getElementById("clearfy-cookie").classList.remove("clearfy-cookie-hide"); } document.getElementById("clearfy-cookie-accept").onclick = function () { document.getElementById("clearfy-cookie").className += " clearfy-cookie-hide"; var clearfy_cookie_date = new Date(new Date().getTime() + 31536000 * 1000); document.cookie = "clearfy_cookie_hide=yes; path=/; expires=" + clearfy_cookie_date.toUTCString(); setTimeout(function () { document.getElementById("clearfy-cookie").parentNode.removeChild(document.getElementById("clearfy-cookie")); }, 300); }</script>
+</body>
+
+</html><!-- WP Fastest Cache file was created in 1.0402429103851 seconds, on 31-07-22 11:44:59 -->
